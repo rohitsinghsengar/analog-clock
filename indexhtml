@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Analog Clock using JS & CSS - Rohit Sengar</title>
+    <style>
+      #clock{
+          width: 200px;
+          height: 200px;
+          position: relative;
+          background-image: url("http://www.helpingwithmath.com/printables/worksheets/time/clockface_numbers01.gif");
+          background-size: cover;
+      }
+      #clock > div{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform-origin: 0px 0px;
+          border-width: 1px;
+          border-style: solid;
+      }
+      #second{
+          width: 40%;
+          border-color: blue;
+      }
+      #minute{
+          width: 35%;
+          border-color: green;
+      }
+      #hour{
+          width: 25%;
+          border-color: red;
+      }
+      
+      @-webkit-keyframes rotating /* Safari and Chrome */ {
+        from {
+          -ms-transform: rotate(20deg);
+          -moz-transform: rotate(20deg);
+          -webkit-transform: rotate(20deg);
+          -o-transform: rotate(20deg);
+          transform: rotate(20deg);
+        }
+        to {
+          -ms-transform: rotate(380deg);
+          -moz-transform: rotate(380deg);
+          -webkit-transform: rotate(380deg);
+          -o-transform: rotate(380deg);
+          transform: rotate(380deg);
+        }
+      }
+      @keyframes rotating {
+        from {
+          -ms-transform: rotate(20deg);
+          -moz-transform: rotate(20deg);
+          -webkit-transform: rotate(20deg);
+          -o-transform: rotate(20deg);
+          transform: rotate(20deg);
+        }
+        to {
+          -ms-transform: rotate(380deg);
+          -moz-transform: rotate(380deg);
+          -webkit-transform: rotate(380deg);
+          -o-transform: rotate(380deg);
+          transform: rotate(380deg);
+        }
+      }
+      .rotate-sec {
+        -webkit-animation: rotateSec 60s linear infinite forwards;
+        -moz-animation: rotateSec 60s linear infinite forwards;
+        -ms-animation: rotateSec 60s linear infinite forwards;
+        -o-animation: rotateSec 60s linear infinite forwards;
+        animation: rotateSec 60s linear infinite forwards;
+      }
+      .rotate-min {
+        -webkit-animation: rotateMin 3600s linear infinite forwards;
+        -moz-animation: rotateMin 3600s linear infinite forwards;
+        -ms-animation: rotateMin 3600s linear infinite forwards;
+        -o-animation: rotateMin 3600s linear infinite forwards;
+        animation: rotateMin 3600s linear infinite forwards;
+      }
+      .rotate-hr {
+        -webkit-animation: rotateHr 43200s linear infinite forwards;
+        -moz-animation: rotateHr 43200s linear infinite forwards;
+        -ms-animation: rotateHr 43200s linear infinite forwards;
+        -o-animation: rotateHr 43200s linear infinite forwards;
+        animation: rotateHr 43200s linear infinite forwards;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clock">
+        <div id="second"></div>
+        <div id="minute"></div>
+        <div id="hour"></div>
+    </div>
+  </body>
+</html>
