@@ -8,6 +8,7 @@
           height: 200px;
           position: relative;
           background-image: url("http://www.helpingwithmath.com/printables/worksheets/time/clockface_numbers01.gif");
+          /* Can use any other clock image as background, wd/ht can also be changed */
           background-size: cover;
       }
       #clock > div{
@@ -30,54 +31,21 @@
           width: 25%;
           border-color: red;
       }
-      
-      @-webkit-keyframes rotating /* Safari and Chrome */ {
-        from {
-          -ms-transform: rotate(20deg);
-          -moz-transform: rotate(20deg);
-          -webkit-transform: rotate(20deg);
-          -o-transform: rotate(20deg);
-          transform: rotate(20deg);
-        }
-        to {
-          -ms-transform: rotate(380deg);
-          -moz-transform: rotate(380deg);
-          -webkit-transform: rotate(380deg);
-          -o-transform: rotate(380deg);
-          transform: rotate(380deg);
-        }
-      }
-      @keyframes rotating {
-        from {
-          -ms-transform: rotate(20deg);
-          -moz-transform: rotate(20deg);
-          -webkit-transform: rotate(20deg);
-          -o-transform: rotate(20deg);
-          transform: rotate(20deg);
-        }
-        to {
-          -ms-transform: rotate(380deg);
-          -moz-transform: rotate(380deg);
-          -webkit-transform: rotate(380deg);
-          -o-transform: rotate(380deg);
-          transform: rotate(380deg);
-        }
-      }
-      .rotate-sec {
+      .rotate-sec { /* time needed for sec hand to complete 1 rotation = 60s */
         -webkit-animation: rotateSec 60s linear infinite forwards;
         -moz-animation: rotateSec 60s linear infinite forwards;
         -ms-animation: rotateSec 60s linear infinite forwards;
         -o-animation: rotateSec 60s linear infinite forwards;
         animation: rotateSec 60s linear infinite forwards;
       }
-      .rotate-min {
+      .rotate-min { /* time needed for min hand to complete 1 rotation = (60*60)s */
         -webkit-animation: rotateMin 3600s linear infinite forwards;
         -moz-animation: rotateMin 3600s linear infinite forwards;
         -ms-animation: rotateMin 3600s linear infinite forwards;
         -o-animation: rotateMin 3600s linear infinite forwards;
         animation: rotateMin 3600s linear infinite forwards;
       }
-      .rotate-hr {
+      .rotate-hr { /* time needed for hour hand to complete 1 rotation = (60*60*12)s */
         -webkit-animation: rotateHr 43200s linear infinite forwards;
         -moz-animation: rotateHr 43200s linear infinite forwards;
         -ms-animation: rotateHr 43200s linear infinite forwards;
